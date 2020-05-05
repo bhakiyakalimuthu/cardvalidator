@@ -11,7 +11,7 @@ import (
 
 func main()  {
 	client := http.Client{
-		Timeout:       30*time.Second,
+		Timeout:       15*time.Second,
 	}
 	s,err:= svc.New("cardvalidator","snap-shot")
 	svc.MustInit(s,err)
