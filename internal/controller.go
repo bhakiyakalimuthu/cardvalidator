@@ -36,6 +36,7 @@ func (c *Controller) Init(logger *zap.Logger) error {
 func (c *Controller) SetupRouter(router chi.Router) error {
 	router.Route("/card-schema", func(r chi.Router) {
 		r.Get("/verify/{num}",c.Verify)
+		r.Get("/stat",c.Stats)
 	})
 	return nil
 }
